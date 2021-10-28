@@ -7,25 +7,7 @@ import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
 
-const firstReducer = (state = 0, action) => {
-    if (action.type === 'BUTTON_ONE') {
-        console.log('firstReducer state', state);
-        console.log('Button 1 was clicked!');
-        return state + 1;
-    }
-    return state;
-};
-
-const secondReducer = (state = 100, action) => {
-    if (action.type === 'BUTTON_TWO') {
-        console.log('secondReducer state', state);
-        console.log('Button 2 was clicked!');
-        return state - 1;
-    }
-    return state;
-};
-
-const elementListReducer = (state = [], action) => {
+const elementList = (state = [], action) => {
     switch (action.type) {
         case 'SET_ELEMENTS':
             return action.payload;
@@ -48,14 +30,18 @@ const storeInstance = createStore(
     // This function is our first reducer
     // reducer is a function that runs every time an action is dispatched
     combineReducers({
-        firstReducer,
-        secondReducer,
-        elementListReducer,
+        elementList,
     }),
     applyMiddleware(sagaMiddleware, logger),
 );
 
 sagaMiddleware.run(watcherSaga);
 
-ReactDOM.render(<Provider store={storeInstance}><App/></Provider>, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={storeInstance}>
+        <App/>
+    </Provider>, 
+    document.getElementById('root')
+);
+
 registerServiceWorker();

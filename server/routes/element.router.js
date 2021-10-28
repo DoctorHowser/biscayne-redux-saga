@@ -1,5 +1,11 @@
 const express = require('express');
-const elementList = [];
+
+const elementList = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Berylium'
+];
 
 const router = express.Router();
 
@@ -8,7 +14,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  elementList.push(req.body.newElement);
+  elementList.push(req.body.name);
   res.sendStatus(200);
 });
 
