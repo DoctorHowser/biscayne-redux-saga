@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './components/App/App.jsx';
-import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
@@ -37,11 +36,11 @@ const storeInstance = createStore(
 
 sagaMiddleware.run(watcherSaga);
 
-ReactDOM.render(
-    <Provider store={storeInstance}>
-        <App/>
-    </Provider>, 
-    document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <Provider store={storeInstance}>
+            <App />
+        </Provider>
+    </React.StrictMode>
 );
-
-registerServiceWorker();
