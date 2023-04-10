@@ -16,7 +16,7 @@ const elementList = (state = [], action) => {
 };    
 
 // this is the saga that will watch for actions
-function* watcherSaga() {
+function* rootSaga() {
 
 }
 
@@ -34,7 +34,7 @@ const storeInstance = createStore(
     applyMiddleware(sagaMiddleware, logger),
 );
 
-sagaMiddleware.run(watcherSaga);
+sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
