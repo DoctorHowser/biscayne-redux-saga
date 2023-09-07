@@ -32,7 +32,7 @@
 
 [🔝 back to top](#redux-saga-starter)
 
-## Remote Setup
+## Github Setup
 
 - [ ] **Create Repo from Use Template**:
   
