@@ -17,7 +17,7 @@
       <a href="#about-this-repo">About This Repo</a>
     </li>
     <li>
-      <a href="#remote-setup">Remote Setup</a>
+      <a href="#github-setup">GitHub Setup</a>
     </li>
     <li><a href="#local-setup">Local Setup</a></li>
     <li><a href="#instructions">Instructions</a></li>
