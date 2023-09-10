@@ -1,3 +1,5 @@
+<a name="redux-saga-starter"></a>
+
 <div align="center">
   <a href="https://github.com/PrimeAcademy/redux-saga-starter">
     <img src="https://avatars.githubusercontent.com/u/9360728?s=200&v=4" alt="Logo" width="80" height="80">
