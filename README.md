@@ -28,7 +28,7 @@
 
 ## About This Repo
 
-🔥 We will be revising an Atomic Element application that tracks elements the user wants with [React](https://react.dev/), [Redux](https://redux.js.org/), and [Redux-Saga](https://redux-saga.js.org/)! 
+🔥 We will be revising an Atomic Element application that tracks elements the user wants with [React](https://react.dev/), [Redux](https://redux.js.org/), and [Redux-Saga](https://redux-saga.js.org/)!
 
 [Redux-Saga](https://redux-saga.js.org/) is a library for managing side effects in React/Redux applications. It allows writing asynchronous logic that looks like standard synchronous JavaScript, which makes it easier to read, write and test.
 
