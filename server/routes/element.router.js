@@ -1,6 +1,6 @@
 const express = require('express');
 
-const elementList = [
+const elements = [
   'Hydrogen',
   'Helium',
   'Lithium',
@@ -10,12 +10,13 @@ const elementList = [
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.send(elementList);
+  res.send(elements);
 });
 
 router.post('/', (req, res) => {
-  elementList.push(req.body.name);
-  res.sendStatus(200);
+  elements.push(req.body.name);
+  res.sendStatus(201);
 });
+
 
 module.exports = router;

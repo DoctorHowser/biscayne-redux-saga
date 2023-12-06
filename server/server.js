@@ -1,16 +1,14 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const elementRouter = require('./routes/element.router');
 const PORT = process.env.PORT || 5001;
 
 /** ---------- MIDDLEWARE ---------- **/
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-app.use('/api/element', elementRouter);
+app.use('/api/elements', elementRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
