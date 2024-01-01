@@ -82,7 +82,7 @@
     npm run client
     ```
 
-The UI should open in your default web browser to the correct URL. If not, open [localhost:3000](http://localhost:3000) in your web browser.
+The UI should open in your default web browser to the correct URL. If not, open [localhost:5173](http://localhost:5173) in your web browser.
 
 > **NOTE:** The key combination `ctrl-c` will stop your server/client from running. Whichever current Node.js process is running in that terminal will stop on macOS.
 
