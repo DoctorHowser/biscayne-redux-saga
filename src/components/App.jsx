@@ -12,38 +12,22 @@ function App() {
   }, []);
 
   const getElements = () => {
-    axios({
-      method: 'GET',
-      url: '/api/elements'
-    })
-      .then((response) => {
-        dispatch({
-          type: 'SET_ELEMENTS',
-          payload: response.data 
-        });
-      })
-      .catch((error) => {
-        console.log('error with element get request', error);
-      });
+
+    dispatch({type: 'FETCH_ELEMENTS'});
+
   }
 
   const addElement = (event) => {
     event.preventDefault();
 
-    axios({
-      method: 'POST',
-      url: '/api/elements',
-      data: { 
-        name: newElement
-      }
+    dispatch({
+      type: 'ADD_ELEMENT',
+      payload: newElement
     })
-      .then((response) => {
-        getElements();
-        setNewElement('');
-      })
-      .catch(error => {
-        console.log('error with element get request', error);
-      });
+   
+
+      setNewElement('');
+
   }
 
   return (
